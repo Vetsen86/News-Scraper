@@ -1,0 +1,20 @@
+<script type="text/javascript" src="js/index.js"></script>
+
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Game Informer News Scraper</h1>
+    <a class="btn btn-primary btn-lg scrape mt-3" href="#" role="button">Scrape new stories</a>
+</div>
+
+<div class="container">
+    {{#each articles}}
+    <div class="card my-4">
+        <div class="card-body">
+            <h5 class="card-title">{{headline}}</h5>
+            <p class="card-text">{{summary}}</p>
+            <a href="{{url}}" target="_blank" class="btn btn-primary">Full Article</a>
+            <a href="/article/{{_id}}" class="btn btn-secondary">Comments</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
