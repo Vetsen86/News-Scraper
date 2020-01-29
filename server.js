@@ -24,7 +24,9 @@ app.set("view engine", "handlebars");
 
 // Connect to the Mongo Database.
 
-mongoose.connect("mongodb://localhost/scraped_news_db2", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraped_news_db2";
+
+mongoose.connect(MONGODB_URI);
 
 //Routes
 
